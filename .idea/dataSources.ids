@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="HSQLDB (Local) - temp" uuid="d9fa6545-d39f-4355-a926-2be65b474728">
+    <database-info product="HSQL Database Engine" version="2.3.2" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.2">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="PUBLIC"/>
+    <table name="ACCOUNT" schema="PUBLIC" catalog="PUBLIC" type="TABLE">
+      <column name="UNIQUE_ID" sqlType="INTEGER" precision="32" scale="0" nullable="false" jdbcType="4"/>
+      <column name="NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BALANCE" sqlType="NUMERIC" precision="128" scale="0" nullable="true" jdbcType="2"/>
+      <primary-key name="SYS_PK_10092" columns="UNIQUE_ID"/>
+    </table>
+  </data-source>
+</component>

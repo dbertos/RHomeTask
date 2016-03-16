@@ -1,0 +1,19 @@
+Potential improvements:
+    1. Make locking on specific Account records (table rows) on a database level while making money transfer. Something similar to:
+        {
+            Account firstLock = getFirstAccountToLockOn(sender, receiver);
+            Account secondLock = getSecondAccountToLockOn(sender, receiver);
+
+            synchronized (firstLock) {
+                synchronized (secondLock) {
+                    if (sender.hasSufficientBalance(amount)) {
+                        makeMoneySwap(sender, receiver, amount);
+                    }
+                }
+            }
+        }
+        
+        Not sure how to achieve this with Hibernate and hsqldb
+
+    2. Use in-memory db rather than file one for test environment
+    3. Make MoneyService/makeTransfer accept entity or form rather than url parameters to be valid POST request
